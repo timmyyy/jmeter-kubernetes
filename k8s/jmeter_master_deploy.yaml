@@ -26,6 +26,16 @@ spec:
             subPath: "load_test"
         ports:
         - containerPort: 60000
+        resources:
+          limits:
+            cpu: 500m
+            memory: 700Mi
+          requests:
+            cpu: 500m
+            memory: 700Mi
+        env:
+          - name: HEAP
+            value: "-Xms512m -Xmx512m -XX:MaxMetaspaceSize=256m"
       volumes:
       - name: loadtest 
         configMap:

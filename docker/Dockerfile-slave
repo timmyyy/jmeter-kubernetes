@@ -1,4 +1,4 @@
-FROM kubernautslabs/jmeter-base:latest
+FROM docker-bamboo-repo.sberned.ru/load/jmeter-base:latest
 MAINTAINER Kubernauts-lab
 		
 EXPOSE 1099 50000

@@ -6,9 +6,6 @@ metadata:
     app: influxdb-jmeter
 spec:
   ports:
-    - port: 8083
-      name: http
-      targetPort: 8083
     - port: 8086
       name: api
       targetPort: 8086

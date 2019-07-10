@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: jmeter-grafana
+  annotations:
+    ingress.kubernetes.io/proxy-body-size: 50m
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: load-cas.domclick.ru
+      http:
+        paths:
+          - path: /grafana
+            backend:
+              serviceName: jmeter-grafana
+              servicePort: 80
