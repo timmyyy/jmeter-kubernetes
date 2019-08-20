@@ -64,7 +64,7 @@ echo
 
 echo
 
-kubectl create -n $tenant -f $working_dir/jmeter_slaves_deploy.yaml
+kubectl create -n $tenant -f $work  ing_dir/jmeter_slaves_deploy.yaml
 
 kubectl create -n $tenant -f $working_dir/jmeter_slaves_svc.yaml
 
